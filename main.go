@@ -94,7 +94,7 @@ func startTLS() {
 	s.AllowInsecureAuth = *tlsInsecure
 	s.Debug = os.Stdout
 	s.TLSConfig = &tls.Config{Certificates: []tls.Certificate{certKeyPair}}
-	log.Fatal(s.ListenAndServeTLS())
+	log.Fatal(s.ListenAndServe())
 }
 
 func startHTTP() {
